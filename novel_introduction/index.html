@@ -15,6 +15,11 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+
+        <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -133,6 +138,26 @@
                 </div>
             </div> 
         </section>
+
+        <py-script>
+            import sys
+            import pygame
+            from pygame.locals import QUIT
+            
+            pygame.init()
+            screen = pygame.display.set_mode((600, 400))
+            
+            def main():
+                while True:
+                    pygame.display.update() 
+                    for event in pygame.event.get():
+                        if event.type == QUIT:
+                            pygame.quit()
+                            sys.exit()
+
+            if __name__ == '__main__':
+                main()
+            </py-script>
         
         <footer class="masthead bg-primary text-white text-center">
         </footer>

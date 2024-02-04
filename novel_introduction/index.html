@@ -16,9 +16,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
 
-        <meta charset="utf-8"/>
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+            <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+            <script defer src="https://pyscript.net/latest/pyscript.js"></script>
         
     </head>
     <body id="page-top">
@@ -140,24 +139,11 @@
         </section>
 
         <py-script>
-            import sys
-            import pygame
-            from pygame.locals import QUIT
-            
-            pygame.init()
-            screen = pygame.display.set_mode((600, 400))
-            
-            def main():
-                while True:
-                    pygame.display.update() 
-                    for event in pygame.event.get():
-                        if event.type == QUIT:
-                            pygame.quit()
-                            sys.exit()
-
-            if __name__ == '__main__':
-                main()
-            </py-script>
+            import numpy as np
+            a = [2, 4, 6, 3, 7]
+            max_val = np.max(a)
+            Element("text").write(max_val)
+        </py-script>
         
         <footer class="masthead bg-primary text-white text-center">
         </footer>

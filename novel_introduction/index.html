@@ -139,10 +139,9 @@
         </section>
 
         <py-script>
-            import numpy as np
-            a = [2, 4, 6, 3, 7]
-            max_val = np.max(a)
-            Element("text").write(max_val)
+            from datetime import datetime
+            now = datetime.now()
+            display(f"今は{now:%Y年%m月%d日 %H:%M:%S}です。")
         </py-script>
         
         <footer class="masthead bg-primary text-white text-center">

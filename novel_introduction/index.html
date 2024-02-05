@@ -138,13 +138,14 @@
             </div> 
         </section>
 
-        <py-script>
-            from datetime import datetime
-            now = datetime.now()
-            display(f"今は{now:%Y年%m月%d日 %H:%M:%S}です。")
-        </py-script>
+        
         
         <footer class="masthead bg-primary text-white text-center">
+            <py-script>
+                from datetime import datetime
+                now = datetime.now()
+                display(f"{now:%Y年%m月%d日 %H:%M:%S}")
+            </py-script>
         </footer>
 
         <!-- Bootstrap core JS-->
